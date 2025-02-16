@@ -12,10 +12,11 @@ db_database=os.environ.get('DB_NAME')
 
 # Подключение к базе данных MySQL
 db = mysql.connector.connect(
-host=db_host,
-user=db_user,
-password=db_password,
-database=db_database,
+host="mysql-container",
+port=3306,
+user='root',
+password='admin',
+database='my_database',
 autocommit=True )
 cursor = db.cursor()
 
